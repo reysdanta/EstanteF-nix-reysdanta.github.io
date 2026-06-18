@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Infinita</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estante Fênix Azul</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>📚 Biblioteca Infinita</h1>
+    <h1>🦅 Estante Fênix Azul</h1>
 
     <input
         type="text"
         id="pesquisa"
         placeholder="Pesquisar livro..."
     >
+
+    <div class="filtros">
+
+        <select id="filtroGenero">
+            <option value="">Todos os gêneros</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Romance">Romance</option>
+            <option value="Terror">Terror</option>
+            <option value="Aventura">Aventura</option>
+        </select>
+
+        <select id="filtroClassificacao">
+            <option value="">Todas as classificações</option>
+            <option value="Livre">Livre</option>
+            <option value="10+">10+</option>
+            <option value="12+">12+</option>
+            <option value="14+">14+</option>
+            <option value="16+">16+</option>
+            <option value="18+">18+</option>
+        </select>
+
+        <select id="filtroColecao">
+            <option value="">Todas as coleções</option>
+            <option value="Bridgerton">Bridgerton</option>
+            <option value="Harry Potter">Harry Potter</option>
+            <option value="Percy Jackson">Percy Jackson</option>
+        </select>
+
+    </div>
 </header>
 
-<div class="container">
-
+<main>
     <div class="livros" id="listaLivros"></div>
-
-    <div class="leitor">
-        <iframe id="pdfViewer"></iframe>
-    </div>
-
-</div>
+</main>
 
 <script src="script.js"></script>
 
